@@ -11,12 +11,12 @@ int _strlen(const char *s)
 int length = 0;
 
 if (s == NULL)
-return 0;
+return (0);
 
 while (s[length] != '\0')
 length++;
 
-return length;
+return (length);
 }
 
 /**
@@ -50,11 +50,11 @@ char *starts_with(const char *haystack, const char *needle)
 while (*needle)
 {
 if (*needle != *haystack)
-return NULL;
+return (NULL);
 needle++;
 haystack++;
 }
-return (char *)haystack;
+return (haystack);
 }
 
 /**
@@ -76,5 +76,5 @@ while (*src)
 
 *dest = '\0';
 
-return ret;
+return (ret);
 }

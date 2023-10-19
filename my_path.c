@@ -14,9 +14,9 @@ struct stat st;
 
 if (path && !stat(path, &st) && S_ISREG(st.st_mode))
 {
-return 1;
+return (1);
 }
-return 0;
+return (0);
 }
 
 /**
@@ -33,7 +33,7 @@ char *buf = malloc(stop - start + 1);
 int i, k = 0;
 
 if (buf == NULL)
-return NULL;
+return (NULL);
 
 for (i = start; i < stop; i++)
 {
@@ -44,7 +44,7 @@ buf[k++] = pathstr[i];
 }
 
 buf[k] = '\0';
-return buf;
+return (buf);
 }
 
 /**
@@ -58,12 +58,12 @@ return buf;
 char *find_path(info_t *info, char *pathstr, char *cmd)
 {
 if (pathstr == NULL || cmd == NULL)
-return NULL;
+return (NULL);
 
 if (strlen(cmd) > 2 && strncmp(cmd, "./", 2) == 0)
 {
 if (is_cmd(info, cmd))
-return cmd;
+return (cmd);
 }
 
 char *path;
@@ -71,9 +71,10 @@ char *token = strtok(pathstr, ":");
 
 while (token != NULL)
 {
-path = malloc(strlen(token) + 1 + strlen(cmd) + 1);  // +1 for '/', +1 for '\0'
+path = malloc(strlen(token) + 1 + strlen(cmd) + 1);
+/* +1 for '/', +1 for '\0' */
 if (path == NULL)
-return NULL;
+return (NULL);
 
 strcpy(path, token);
 strcat(path, "/");
@@ -82,13 +83,12 @@ strcat(path, cmd);
 if (is_cmd(info, path))
 {
 free(path);
-return path;
+return (path);
 }
 
 free(path);
 token = strtok(NULL, ":");
 }
 
-return NULL;
+return (NULL);
 }
-

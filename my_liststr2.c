@@ -9,7 +9,7 @@ size_t list_len(const list_t *h)
 {
 size_t length = 0;
 
-for (length = 0; h; length++, h = h->next);
+for (length = 0; h; length++, h = h->next)
 
 return (length);
 }
@@ -65,7 +65,8 @@ size_t count = 0;
 
 while (h)
 {
-printf("%ld: %s\n", (long)convert_number(h->num, 10, 0), h->str ? h->str : "(nil)");
+printf("%ld: %s\n", (long)convert_number(h->num, 10, 0)
+, h->str ? h->str : "(nil)");
 h = h->next;
 count++;
 }
@@ -90,12 +91,12 @@ while (node)
 match = starts_with(node->str, prefix);
 
 if (match && ((c == -1) || (*match == c)))
-return node;
+return (node);
 
 node = node->next;
 }
 
-return( NULL);
+return (NULL);
 }
 
 /**
@@ -112,7 +113,7 @@ size_t index = 0;
 while (head)
 {
 if (head == node)
-return (ssize_t)index;
+return (index);
 
 head = head->next;
 index++;

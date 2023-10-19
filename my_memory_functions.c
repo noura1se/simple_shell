@@ -17,7 +17,7 @@ s++;
 n--;
 }
 
-return start;
+return (start);
 }
 
 /**
@@ -52,7 +52,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 char *new_ptr;
 
 if (!ptr)
-return (malloc(new_size);
+return (malloc(new_size));
 
 if (!new_size)
 {

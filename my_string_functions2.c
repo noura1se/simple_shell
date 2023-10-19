@@ -10,7 +10,7 @@
 char *_strcpy(char *dest, const char *src)
 {
 if (dest == src || src == NULL)
-return dest;
+return (dest);
 
 int i = 0;
 
@@ -22,11 +22,11 @@ i++;
 
 dest[i] = '\0';
 
-return dest;
+return (dest);
 }
 
 /**
- * _strdup - duplicates a stringggg 
+ * _strdup - duplicates a stringggg
  * @str: the string to duplicate jhj
  *
  * Return: pointer to the duplicated string
@@ -34,14 +34,14 @@ return dest;
 char *_strdup(const char *str)
 {
 if (str == NULL)
-return NULL;
+return (NULL);
 
 char *ret = malloc(strlen(str) + 1);
 
 if (ret != NULL)
 strcpy(ret, str);
 
-return ret;
+return (ret);
 }
 
 /**
@@ -59,7 +59,7 @@ return;
 
 while (str[i] != '\0')
 {
-_putchar(str[i]);  // Calls _putchar as in the original code
+_putchar(str[i]);  /* Calls _putchar as in the original code */
 i++;
 }
 }

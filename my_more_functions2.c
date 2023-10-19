@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * _erratoi - converts a string to an integerrrr 
+ * _erratoi - converts a string to an integerrrr
  * @s: the string to be converted fdjgk
  *
  * Return: 0 if no numbers in string, converted 55dkdf  number otherwise
@@ -21,15 +21,15 @@ if (s[i] >= '0' && s[i] <= '9')
 result = result * 10 + (s[i] - '0');
 
 if (result > INT_MAX)
-return -1;
+return (-1);
 }
 else
 {
-return -1;  // Invalid character encountered
+return (-1);  /* Invalid character encountered*/
 }
 }
 
-return (int)result;
+return (result);
 }
 
 /**
@@ -39,7 +39,8 @@ return (int)result;
  */
 void print_error(info_t *info, const char *estr)
 {
-fprintf(stderr, "%s: %d: %s: %s\n", info->fname, info->line_count, info->argv[0], estr);
+fprintf(stderr, "%s: %d: %s: %s\n", info->fname
+, info->line_count, info->argv[0], estr);
 }
 
 /**
@@ -64,7 +65,7 @@ input = -input;
 fprintf(output_stream, "%d", input);
 count += (int)(floor(log10(abs(input))) + 1);
 
-return count;
+return (count);
 }
 
 /**
@@ -81,7 +82,8 @@ static char buffer[50];
 char *ptr = buffer;
 char sign = 0;
 unsigned long n = num;
-const char *array = (flags & CONVERT_LOWERCASE) ? "0123456789abcdef" : "0123456789ABCDEF";
+const char *array = (flags & CONVERT_LOWERCASE
+) ? "0123456789abcdef" : "0123456789ABCDEF";
 
 if (!(flags & CONVERT_UNSIGNED) && num < 0)
 {
@@ -99,10 +101,11 @@ if (sign)
 
 *ptr = '\0';
 
-// Reverse the string
+/* Reverse the string */
 char *start = buffer;
 char *end = ptr - 1;
-while (start < end) {
+while (start < end)
+{
 char temp = *start;
 *start = *end;
 *end = temp;
@@ -110,11 +113,12 @@ start++;
 end--;
 }
 
-return buffer;
+return (buffer);
 }
 
 /**
- * remove_comments - function replaces the first instance of '#' with '\0' nnggg
+ * remove_comments - function replaces the first instance o
+ * f '#' with '\0' nnggg
  * @buf: address of the string to modify  9999
  *
  * Return: Always 0
