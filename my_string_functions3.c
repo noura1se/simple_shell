@@ -1,3 +1,5 @@
+#include "shell.h"
+
 /**
  * _strncpy - copies a string fgh
  * @dest: the destination string to be copied to fhtht

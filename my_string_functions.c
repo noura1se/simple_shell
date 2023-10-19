@@ -1,3 +1,5 @@
+#include "shell.h"
+
 /**
  * _strlen - returns the length of a string dfjektg
  * @s: the string whose length to check dgjrky

@@ -1,3 +1,6 @@
+#include "shell.h"
+
+
 /**
  * interactive - returns true if shell is in interactive modeeee
  * @info: pointer to a structttt

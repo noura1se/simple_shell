@@ -1,3 +1,4 @@
+#include "shell.h"
 /**
  * list_len - determines length of linked list list h list
  * @h: pointer to first node node
@@ -10,7 +11,7 @@ size_t length = 0;
 
 for (length = 0; h; length++, h = h->next);
 
-return length;
+return (length);
 }
 
 /**
@@ -69,7 +70,7 @@ h = h->next;
 count++;
 }
 
-return count;
+return (count);
 }
 
 /**
@@ -94,7 +95,7 @@ return node;
 node = node->next;
 }
 
-return NULL;
+return( NULL);
 }
 
 /**
@@ -117,5 +118,5 @@ head = head->next;
 index++;
 }
 
-return -1;
+return (-1);
 }
